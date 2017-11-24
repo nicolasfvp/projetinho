@@ -93,6 +93,7 @@ $(document).ready(function(){
             $("#jsFase12").hide()
             $("#jsFase13").hide()
             $("#jsFase14").hide()
+            setTimeout(function () {alert('fon')}, 10000)
         }if($('#jsPassword').val()=="uma pena, o meu amor não mudou ainda"){
             $("#jsFase1").hide()
             $("#jsFase2").hide()
