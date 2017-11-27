@@ -32,7 +32,7 @@ $(document).ready(function(){
             $("#jsFase13").hide()
             $("#jsFase14").hide()
         }
-        if($('#jsPassword').val()=="era a companheira de todos"){
+        if($('#jsPassword').val()=="Era a companheira de todos"){
             $("#jsFase1").hide()
             $("#jsFase2").hide()
             $("#jsFase3").hide()
@@ -79,6 +79,7 @@ $(document).ready(function(){
             $("#jsFase13").hide()
             $("#jsFase14").hide()
         }if($('#jsPassword').val()=="mas tudo mudou hoje em dia"){
+            document.title = "a seguir, (fase)x-1"
             $("#jsFase1").hide()
             $("#jsFase2").hide()
             $("#jsFase3").hide()
@@ -93,7 +94,6 @@ $(document).ready(function(){
             $("#jsFase12").hide()
             $("#jsFase13").hide()
             $("#jsFase14").hide()
-            setTimeout(function () {alert('fon')}, 10000)
         }if($('#jsPassword').val()=="uma pena, o meu amor não mudou ainda"){
             $("#jsFase1").hide()
             $("#jsFase2").hide()
@@ -124,6 +124,9 @@ $(document).ready(function(){
             $("#jsFase12").hide()
             $("#jsFase13").hide()
             $("#jsFase14").hide()
+            
+            colocaEspera();
+            
         }if($('#jsPassword').val()=="não quero passar meu sofrimento adiante, quero acabar com ele"){
             $("#jsFase1").hide()
             $("#jsFase2").hide()
@@ -139,7 +142,8 @@ $(document).ready(function(){
             $("#jsFase12").hide()
             $("#jsFase13").hide()
             $("#jsFase14").hide()
-        }if($('#jsPassword').val()=="em milhares de maneiras eu penso, mas somente uma funciona"){
+        }if($('#jsPassword').val()=="em milhares de maneiras eu penso mas somente uma funciona"){
+            document.title="sim, é o mesmo de antes"
             $("#jsFase1").hide()
             $("#jsFase2").hide()
             $("#jsFase3").hide()
@@ -199,6 +203,19 @@ $(document).ready(function(){
             $("#jsFase12").hide()
             $("#jsFase13").hide()
             $("#jsFase14").show()
+        }if($('#jsPassword').val()=="torre eiffel"){
+            alert("sim, tudo isso é uma história de amor")
         }
     })
 })
+
+
+var mostraSenha = function () {
+    $("#jsEspere").html("não quero passar meu sofrimento adiante, quero acabar com ele");
+    setTimeout(colocaEspera, 5000);
+};
+
+var colocaEspera = function () {
+    $("#jsEspere").html("espere");
+    setTimeout(mostraSenha, 900000);
+};
